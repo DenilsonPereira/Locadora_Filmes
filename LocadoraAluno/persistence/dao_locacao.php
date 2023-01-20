@@ -14,10 +14,10 @@
 		}	
 		
 		public function cadastrarLocacao(Locacao $locacao){
-			$DataLocacao = $locacao->getdataLocacao();
-			$DataDevolucao = $locacao->getdataDevolucao();
-			$NomeFilme =  $locacao->getnomeFilme();
-			$NomeCliente = $locacao->getnomeCliente();
+			$this->DataLocacao = $locacao->getdataLocacao();
+			$this->DataDevolucao = $locacao->getdataDevolucao();
+			$this->NomeFilme =  $locacao->getnomeFilme();
+			$this->NomeCliente = $locacao->getnomeCliente();
 
 			$sql = "INSERT INTO locacao (dataLocacao, dataDevolucao, nomeFilme, nomeCliente) VALUES ('$dataLocacao', '$dataDevolucao', '$nomeFilme', '$nomeCliente')";
 			$this->conexao->executarQuery($sql);
